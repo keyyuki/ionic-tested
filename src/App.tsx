@@ -25,17 +25,17 @@ import "@ionic/react/css/display.css";
 import "./theme/variables.css";
 
 const App: React.FC = () => {
-  const [fcmToken, setFcmToken] = useState<string>("no token");
+  // const [fcmToken, setFcmToken] = useState<string>("no token");
 
-  useEffect(() => {
-    initNotification(setFcmToken);
-  }, []);
+  // useEffect(() => {
+  //   initNotification(setFcmToken);
+  // }, []);
   return (
     <IonApp>
       <IonReactRouter>
         <IonRouterOutlet>
           <Route exact path="/home">
-            <Home fcmToken={fcmToken} />
+            <Home fcmToken={"fcmToken"} />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
